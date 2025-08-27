@@ -48,7 +48,7 @@ final class libasynql{
 	private static $packaged;
 
 	public static function isPackaged() : bool{
-		return self::$packaged;
+		return false;//self::$packaged;
 	}
 
 	public static function detectPackaged() : void{
@@ -74,7 +74,7 @@ final class libasynql{
 	 * @throws SqlError if the connection could not be created
 	 */
 	public static function create(PluginBase $plugin, $configData, array $sqlMap, bool $logQueries = null) : DataConnector{
-		libasynql::detectPackaged();
+		//libasynql::detectPackaged();
 
 		if(!is_array($configData)){
 			throw new ConfigException("Database settings are missing or incorrect");
